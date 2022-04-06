@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Poppins:ital,wght@1,300;1,400;1,500;1,600&family=Ubuntu:ital,wght@1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar section */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding:15px 0;
+    background: rgb(178, 224, 236);
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: rgb(99, 163, 179);
+} 
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: rgb(105, 177, 196);
+}
+
+/* Menu bar */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Home Section */
+.home{
+    display: flex;
+    background: url("images/hp.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 200px;
+    font-family: 'Ubuntu', sans-serif ;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .max-width .row{
+    margin-right: 0;
+}
+
+.home .hcontent .text-1{
+    font-size: 27px;
+}
+
+.home .hcontent .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .hcontent .text-3{
+    font-size: 27px;
+    margin: 5px 0; 
+}
+
+/* Comment content styling code */
+.section{
+    padding: 100px 0;
+}
+
+.about, .skills{
+    font-family: 'Poppins', sans-serif;
+}
+/* .connect .ccontent */
+.about .acontent, .skills .scontent{ 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 60px;
+    margin-bottom: 75px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(105, 177, 196);
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* About sec */
+.about{
+    padding-bottom: 60px;
+}
+
+.about .title::after{
+    content: "who I am";
+}
+
+.about .acontent .left{
+    width: 45%;
+}
+
+.about .acontent .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .acontent .right{
+    width: 55%;
+}
+
+.about .acontent .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .acontent .right p{
+    text-align: justify;
+}
+
+.about .acontent .right a{
+    display: inline-block;
+    background: rgb(105, 177, 196);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(105, 177, 196);
+    transition: all 0.3s ease;
+}
+
+/* skills section */
+.skills{
+    padding-top: 150px;
+    background: rgb(220, 239, 245);
+    padding-bottom: 150px;
+}
+.skills .title::after{
+    content: "what do i know";
+}
+
+.skills .scontent .column{
+    width: calc(50% - 30px);
+}
+
+.skills .scontent .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .scontent .left p{
+    text-align: justify;
+}
+
+.skills .scontent .right .bars{
+    margin-bottom: 15px;
+}
+ 
+.skills .scontent .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .scontent .right span{
+    font-weight: 500;
+    font-size: 20px
+}
+
+.skills .scontent .right .line{
+    height: 5px;
+    width: 100%;
+    background: gainsboro;
+    position: relative;
+}
+
+.skills .scontent .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(105, 177, 196);
+}
+.scontent .right .html::before{
+    width: 90%;
+}
+
+.scontent .right .css::before{
+    width: 70%;
+}
+
+.scontent .right .js::before{
+    width: 50%;
+}
+
+/* connect section */
+.connect{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.connect .title::after{
+    content: "get in touch";
+}
+
+.connect .c form .fields{
+    display: flex;
+}
+
+.connect .c form .field,
+.connect .c form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.connect .c form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.connect .c form .name{
+    margin-right: 10px;
+}
+.connect .c form .email{
+    margin-left: 10px;
+}
+
+.connect .c form .field input,
+.connect .c form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.connect .c form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.connect .c form .button{
+    height: 47px;
+    width : 170px;
+}
+
+.connect .c form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(105, 177, 196);
+    background: rgb(105, 177, 196);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.connect .c form .button button::hover{
+    color: rgb(105, 177, 196);
+    background: none;
+}
+
+ /* footer section */
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: rgb(48, 77, 116);
+    padding: 10px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    background-color:none;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #c0eff5;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+ .footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 8px;
+} 
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin-right: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #fff;
+} 
